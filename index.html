@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <section class="header">
+            <img class="header-logo" src="./Resoureces/Header.png" alt="Style Select">
+        </section>
+    </header>
+    <main>
+        <section class="main-form-section">
+            <div class="form-container">
+                <h3 class="form-text">GET YOUR HOME STYLED BY STYLE EXPERTS TO CREATE STUNNING ROOMS YOU'LL LOVE</h3>
+                <form action="#0" onsubmit="return validation()" class="form">
+                    <div class="each-form-field-cont">
+                        <label class="label-text" for="fname">Full Name*</label>
+                        <input class="input-fields" type="text" id="fname" onblur="validation1()">
+                        <span id="fname-error" class="fname-error error"></span>
+                    </div>
+                    <div class="each-form-field-cont">
+                        <label class="label-text" for="email">Email Id*</label>
+                        <input class="input-fields" type="text" id="email" onblur="validation2()">
+                        <span id="email-error" class="email-error error"></span>
+                    </div>
+                    <div class="each-form-field-cont">
+                        <label class="label-text" for="mobile">Mobile*</label>
+                        <input class="input-fields" type="text" id="mobile" onblur="validation3()">
+                        <span id="mobile-error" class="mobile-error error"></span>
+                    </div>
+                    <div class="each-form-field-cont">
+                        <label class="label-text" for="city">City*</label>
+                        <input list="cities-list" class="input-fields" type="text" id="city" onblur="validation4()">
+                        <span id="city-error" class="city-error error"></span>
+
+                        <datalist id="cities-list">
+                            <option value="Mumbai">
+                            <option value="Pune">
+                            <option value="Bangalore">
+                            <option value="Indore">
+                            <option value="Hyderabad">
+                          </datalist>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label class="whatsapp-label-text" for="whatsapp">Yes, I would like to get important updates on <i class="fa-brands fa-whatsapp"></i> <span class="whatsapp-text">Whatsapp</span> </label>
+                    </div>
+
+                    <div class="btn-cont">
+                        <button  id="submit-btn" class="submit-btn" type="submit">SUBMIT</button>
+                        <span class="success-message" id="success-message"></span>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="how-it-works-section">
+            <h1 class="how-it-text">HOW IT WORKS</h1>
+            <div class="how-it-works-sub-cont">
+                <div class="each-cont-of-sub-cont">
+                    <span class="number-cont">01</span>
+                    <h3 class="tell-us-text">TELL US ABOUT YOUR SELF</h3>
+                    <p class="talk-to-text">Talk to our designer so that we know more about your style.</p>
+                </div>
+                <hr class="hr-line">
+                <div class="each-cont-of-sub-cont">
+                    <span class="number-cont">02</span>
+                    <h3 class="tell-us-text">LETS MEET</h3>
+                    <p class="talk-to-text">Book an appointment to meet a D’Decor style consultant.</p>
+                </div>
+                <hr class="hr-line">
+                <div class="each-cont-of-sub-cont last-each-cont-of-sub-cont">
+                    <span class="number-cont">03</span>
+                    <h3 class="tell-us-text">CREATE AND COMPLETE</h3>
+                    <p class="talk-to-text">Watch your dream home come alive.</p>
+                </div>
+            </div>
+        </section>
+        <section class="decor-cont">
+            <h1 class="decor-concepts-heading">DECOR CONCEPTS</h1>
+            <div class="slider">
+                <button onclick="onClickLeftBtn()" id="left-btn" class="left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div>
+                    <div class="slider-sub-cont">
+                        <div class="head-and-para-cont">
+                            <h1 id="slider-h1" class="coastal-text">COASTAL</h1>
+                            <p id="slider-para" class="breathe-text">Breathe, be free and live in the colours of sun and sea. Lighter colours and textured fabrics for a smooth and easy style.</p>
+                        </div>
+                        <img id="slider-img" class="decor-image" src="./Resoureces/decor-1.png" alt="Decor">
+                    </div>
+                </div>
+                <button onclick="onClickRightBtn()" id="right-btn" class="right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+        <section class="testimonials-cont">
+            <h1 class="testimonials-text">TESTIMONIALS</h1>
+            <div class="testimonals-sub-cont">
+                <div class="inner-testimonial-sub-cont">
+                    <h1 class="testimaonial-title-text">We are loving the mood. It is exactly what we wanted for our first house.</h1>
+                    <a class="testimonial-anchor-text" href="#0">SANDEEP SHAH | LIVING ROOM</a>
+                    <p class="testimonial-para-text">CLOSE TO NATURE: Green can create a calm haven in your lounge, add a sense of prosperity in your home office, lend a nurturing vibe in your kitchen and revitalize you in the bedroom.</p>
+                </div>
+                <img class="testimonial-image" src="./Resoureces/testimonial-1.png" alt="Testimonial">
+            </div>
+            <div class="testimonals-sub-cont">
+                <div class="inner-testimonial-sub-cont">
+                    <h1 class="testimaonial-title-text">A simple, modern look was what I wanted for my space</h1>
+                    <a class="testimonial-anchor-text" href="#0">ESIKIRA KHALIFA  |  LIVING ROOM</a>
+                    <p class="testimonial-para-text">A HOME AWAY FROM HOME: A simple, modern look was what I wanted for my space : I asked my stylist to help me create a calm and relaxing space which is what I wanted after a long day at work. Keeping that in mind, she curated mood boards especially for me and I absolutely loved it!</p>
+                </div>
+                <img class="testimonial-image even-testimonials" src="./Resoureces/testimonial-2.png" alt="Testimonial">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-section">
+            <div class="inner-footer-section">
+                <img class="footer-logo" src="./Resoureces/footer-logo.png" alt="Logo">
+                <span class="by-text">BY</span>
+                <img class="footer-image" src="./Resoureces/footer-image.png" alt="Footer image">
+            </div>
+        </section>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
